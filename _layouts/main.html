@@ -1,0 +1,141 @@
+---
+layout: default
+---
+<article>
+
+    <!--<div class="alert alert-dismissible alert-warning">
+        <h4 class="alert-heading">Under construction</h4>
+        <p class="mb-0">Leaderboard and instructions coming soon. Checkout <a href="{{ site.github.repository_url }}">the repository for data and scripts</a> in the meantime.</p>
+    </div>
+
+    <header>
+        <h1>{{ page.title | escape }}</h1>
+    </header>-->
+
+
+
+    <div class="container">
+
+        <div class="card">
+            <div class="card-body">
+                <h1 class="">{{ page.title | escape }}</h1>
+                <p class="card-text">{{ content }}</p>
+                <p>
+                    <a href="https://github.com/DataManagementLab/clickbait-resolving-challenge/tree/main/data" class="btn btn-warning">Download the corpus</a>
+                    <a href="participate.html" class="btn btn-success">Participate</a>
+                </p>
+            </div>
+        </div>
+
+        <h2 class="mt-4 mb-3">Leaderboard</h2>
+
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col" class="text-center">Rank</th>
+                <th scope="col" class="text-center">Approach</th>
+                <th scope="col">ExactMatch</th>
+                <th scope="col">Rouge-2</th>
+                <th scope="col">Rouge-L</th>
+                <th scope="col">Meteor</th>
+                <th scope="col">BLEU-2</th>
+                <th scope="col">BERTScore</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="text-center">1<br><span class="badge bg-light">Jan 17, 2021</span></td>
+                <th scope="row" class="text-center">
+                    T5 aug+fine
+                    <a href="https://github.com/DataManagementLab/clickbait-resolving-challenge/tree/main/baselines"><i class="fas fa-file-code"></i></a><br>
+                    <i>(Hättasch &amp; Binnig '21)</i>
+                </th>
+                <td>7.20 / <b>4.56</b></td>
+                <td>8.70 / <b>6.88</b></td>
+                <td>18.46 / <b>17.02</b></td>
+                <td>22.96 / <b>20.38</b></td>
+                <td>9.10 / <b>6.90</b></td>
+                <td>20.89 / <b>25.23</b></td>
+            </tr>
+            <tr>
+                <td class="text-center">2<br><span class="badge bg-light">Jan 17, 2021</span></td>
+                <th scope="row" class="text-center">
+                    T5 fine
+                    <a href="https://github.com/DataManagementLab/clickbait-resolving-challenge/tree/main/baselines"><i class="fas fa-file-code"></i></a><br>
+                    <i>(Hättasch &amp; Binnig '21)</i>
+                </th>
+                <td>4.55 / <b>3.42</b></td>
+                <td>7.16 / <b>7.16</b></td>
+                <td>15.68 / <b>15.34</b></td>
+                <td>18.91 / <b>17.90</b></td>
+                <td>7.37 / <b>6.81</b></td>
+                <td>15.67 / <b>21.37</b></td>
+            </tr>
+            <tr>
+                <td class="text-center">3<br><span class="badge bg-light">Jan 17, 2021</span></td>
+                <th scope="row" class="text-center">
+                    BART SQuADv2
+                    <a href="https://github.com/DataManagementLab/clickbait-resolving-challenge/tree/main/baselines"><i class="fas fa-file-code"></i></a><br>
+                    <i>(Hättasch &amp; Binnig '21)</i>
+                </th>
+                <td>0.38 / <b>0.38</b></td>
+                <td>5.65 / <b>6.00</b></td>
+                <td>10.30 / <b>10.34</b></td>
+                <td>11.64 / <b>10.89</b></td>
+                <td>5.08 / <b>6.10</b></td>
+                <td>4.76 / <b>12.76</b></td>
+            </tr>
+            <tr>
+                <td class="text-center">4<br><span class="badge bg-light">Jan 17, 2021</span></td>
+                <th scope="row" class="text-center">
+                    T5
+                    <a href="https://github.com/DataManagementLab/clickbait-resolving-challenge/tree/main/baselines"><i class="fas fa-file-code"></i></a><br>
+                    <i>(Hättasch &amp; Binnig '21)</i>
+                </th>
+                <td>1.89 / <b>1.14</b></td>
+                <td>3.94 / <b>2.75</b></td>
+                <td>9.07 / <b>8.49</b></td>
+                <td>10.74 / <b>9.52</b></td>
+                <td>4.23 / <b>2.50</b></td>
+                <td>7.30 / <b>11.24</b></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card border-success">
+                    <div class="card-header">Acknowledgments</div>
+                    <div class="card-body">
+                        <p class="card-text">We thank Max Doll, Kathrin Ferring, Martin Otterbein, and Jan-Hendrik Schmidt for the countless hours they spent reading hardly bearable texts.<br><br>
+                            This work has been supported by the German Research Foundation as part of the Research Training Group Adaptive Preparation of Information from Heterogeneous Sources (AIPHES) under grant No. <i>GRK 1994/1</i>, as well as the Federal Ministry of Education and Research (BMBF) and the state of Hesse as part of the NHR Program.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-warning">
+                    <div class="card-header">How to cite</div>
+                    <div class="card-body">
+                        <p class="card-text">TBA (Paper currently under submission)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-danger mb-3">
+                    <div class="card-header">Questions &amp; Contributions</div>
+                    <div class="card-body">
+                        <p class="card-text">Open a <a href="https://github.com/DataManagementLab/clickbait-resolving-challenge/issues">Issue in our repository</a> or contact <a href="https://www.informatik.tu-darmstadt.de/datamanagement/datamanagement/dm_people/dm_people_detailseite_77504.en.jsp">Benjamin Hättasch</a></p>
+                    </div>
+                </div>
+                <div class="card border-info">
+                    <div class="card-body">
+                        <p class="card-text">This is a project of <a href="https://www.informatik.tu-darmstadt.de/datamanagement/datamanagement/index.en.jsp">Data Management Lab @ TU Darmstadt</a>.</p>
+                        <img src="assets/logo_neu_transparent.png" alt="DM Lab Logo" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</article>
