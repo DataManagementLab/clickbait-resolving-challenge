@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body style="background: rgb(10,61,96);background: linear-gradient(0deg, rgba(10,61,96,1) 0%, rgba(183,21,64,1) 97%);min-height:100vh;">
+
+    {%- include header.html -%}
+
+    <div class="py-5">
+      <div class="container page-content">
+          {{ content }}
+      </div>
+    </div>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>
